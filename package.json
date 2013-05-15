@@ -1,0 +1,26 @@
+{
+  "name": "date-ms",
+  "version": "0.0.1",
+  "description": "date string to ms convertion lib",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artjock/date-ms.git"
+  },
+  "keywords": [
+    "ms",
+    "date",
+    "time"
+  ],
+  "readmeFilename": "README.md"
+}
