@@ -1,13 +1,14 @@
-# date-ms: miliseconds conversion utility
-Inspired by [guille/ms.js](https://github.com/guille/ms.js)
+date-ms
+=======
+Miliseconds conversion utility, inspired by [guille/ms.js](https://github.com/guille/ms.js)
 
-## Installation
+### Installation
 
 ```
 npm install date-ms
 ```
 
-## Usage
+### Usage
 
 ```js
 ms('1d')        // 86400000
@@ -28,6 +29,6 @@ ms('2013-04-09T13:45+0400')                     // 1365500700000
 ms('Thu May 16 2013 00:47:53 GMT+0400 (MSK)')   // 1368650873000
 ```
 
-## License
+### License
 
 MIT
