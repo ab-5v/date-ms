@@ -1,6 +1,6 @@
 date-ms
 =======
-Miliseconds conversion utility, inspired by [guille/ms.js](https://github.com/guille/ms.js)
+Milliseconds conversion utility, inspired by [guille/ms.js](https://github.com/guille/ms.js)
 
 ### Installation
 
