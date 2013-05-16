@@ -20,7 +20,7 @@ var rems = /^((?:\d+)?\.?\d+)\s*(ms|s|m|h|d|y)?$/i;
  * @return {Number}
  * @api public
  */
-module.exports = function(ts){
+module.exports = function(ts) {
     var res;
     switch (typeof ts) {
         case 'object': res = +ts; break;
@@ -30,6 +30,14 @@ module.exports = function(ts){
     }
     return res;
 };
+
+module.exports.tz = (new Date()).getTimezoneOffset() * mult['m'];
+
+Object.defineProperty(module.exports, 'tz', {
+    writable: false,
+    enumerable: true,
+    value: (new Date()).getTimezoneOffset() * mult['m']
+});
 
 /**
  * Parse the given `str` and return milliseconds.

@@ -89,3 +89,26 @@ describe('ms(date)', function(){
     });
 });
 
+describe('ms.tz', function() {
+
+    beforeEach(function() {
+        this.tz = (new Date()).getTimezoneOffset() * 1000 * 60;
+    });
+
+    it('should return timezone offset', function() {
+        expect( ms.tz ).to.eql( this.tz );
+    });
+
+    it('should be enumerable', function() {
+        expect( ms ).to.have.key( 'tz' );
+    });
+
+    it('should not be writable', function() {
+        ms.tz = 42;
+        var f = function() { 'use strict'; ms.tz = 42; };
+
+        expect( ms.tz ).to.eql( this.tz );
+        expect( f ).to.throwError();
+    });
+
+});
