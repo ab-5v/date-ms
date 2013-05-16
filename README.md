@@ -11,6 +11,8 @@ npm install date-ms
 ### Usage
 
 ```js
+var ms = require('date-ms');
+
 ms('1d')        // 86400000
 ms('10h')       // 36000000
 ms('2h')        // 7200000
