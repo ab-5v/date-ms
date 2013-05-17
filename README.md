@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/artjock/xtnd.png)](http://travis-ci.org/artjock/xtnd)
+
 date-ms
 =======
 Milliseconds conversion utility, inspired by [guille/ms.js](https://github.com/guille/ms.js)
