@@ -21,14 +21,17 @@ var rems = /^((?:\d+)?\.?\d+)\s*(ms|s|m|h|d|y)?$/i;
  * @api public
  */
 module.exports = function(ts) {
-    var res;
-    switch (typeof ts) {
-        case 'object': res = +ts; break;
-        case 'number': res = ts; break;
-        case 'string': res = parse(ts); break;
-        case 'undefined': res = +new Date(); break;
+    switch (ts) {
+        case '':
+        case null:
+        case undefined:
+            return +new Date();
     }
-    return res;
+    switch (typeof ts) {
+        case 'string': return parse(ts);
+        case 'object': return +ts;
+        case 'number': return ts;
+    }
 };
 
 module.exports.tz = (new Date()).getTimezoneOffset() * mult['m'];

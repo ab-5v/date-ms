@@ -55,8 +55,13 @@ describe('ms(string)', function(){
             .to.eql( 1368650873000 );
     });
 
-    it('should return NaN if invalid', function () {
+    it('should return NaN if invalid string', function () {
         expect( isNaN(ms('☃')) ).to.be(true);
+    });
+
+    it('should return current date for empty string', function() {
+        var now = +new Date();
+        expect( ms('') ).to.eql( now );
     });
 })
 
@@ -65,6 +70,15 @@ describe('ms(undefined)', function() {
     it('should return current date ts', function() {
         var now = +new Date();
         expect( ms() ).to.eql( now );
+    });
+
+});
+
+describe('ms(null)', function() {
+
+    it('should return current date for null', function() {
+        var now = +new Date();
+        expect( ms(null) ).to.eql( now );
     });
 
 });

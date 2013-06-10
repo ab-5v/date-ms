@@ -24,8 +24,9 @@ ms('100')       // 100
 
 ms(1000)        // 1000
 ms()            // +new Date()
+ms('')          // +new Date()
+ms(null)        // +new Date()
 ms(undefined)   // +new Date()
-ms(null)        // NaN
 
 ms( new Date('2013-04-05') )                    // 1365120000000
 ms('2013-04-05')                                // 1365120000000
