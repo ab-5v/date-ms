@@ -1,0 +1,10 @@
+{
+  "name": "date-ms",
+  "version": "0.0.4",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
