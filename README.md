@@ -9,6 +9,9 @@ Milliseconds conversion utility, inspired by [guille/ms.js](https://github.com/g
 ```
 npm install date-ms
 ```
+```
+bower install date-ms
+```
 
 ### Usage
 
