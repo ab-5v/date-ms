@@ -1,6 +1,4 @@
-[![build status](https://secure.travis-ci.org/artjock/date-ms.png)](http://travis-ci.org/artjock/date-ms)
-
-date-ms
+date-ms [![build status](https://secure.travis-ci.org/artjock/date-ms.png)](http://travis-ci.org/artjock/date-ms)
 =======
 Milliseconds conversion utility, inspired by [guille/ms.js](https://github.com/guille/ms.js)
 
