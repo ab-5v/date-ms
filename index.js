@@ -1,3 +1,4 @@
+;(function(root) {
 /**
  * Helpers.
  */
@@ -20,7 +21,7 @@ var rems = /^((?:\d+)?\.?\d+)\s*(ms|s|m|h|d|y)?$/i;
  * @return {Number}
  * @api public
  */
-module.exports = function(ts) {
+var ms = function(ts) {
     switch (ts) {
         case '':
         case null:
@@ -34,9 +35,9 @@ module.exports = function(ts) {
     }
 };
 
-module.exports.tz = (new Date()).getTimezoneOffset() * mult['m'];
+ms.tz = (new Date()).getTimezoneOffset() * mult['m'];
 
-Object.defineProperty(module.exports, 'tz', {
+Object.defineProperty(ms, 'tz', {
     writable: false,
     enumerable: true,
     value: (new Date()).getTimezoneOffset() * mult['m']
@@ -55,3 +56,11 @@ function parse(str) {
         parseFloat(match[1]) * mult[match[2] || 'ms'] :
         Date.parse(str);
 }
+
+if (typeof module === 'object' && module.exports) {
+    module.exports = ms;
+} else {
+    this.ms = ms;
+}
+
+})(this);
