@@ -126,3 +126,16 @@ describe('ms.tz', function() {
     });
 
 });
+
+describe('sod', function() {
+
+    it('should return start of day', function() {
+        expect( ms.sod('Mon Jun 17 2013 15:57:49 GMT+0400 (MSK)') )
+            .to.eql( +new Date('Mon Jun 17 2013 00:00:00 GMT+0400 (MSK)') );
+    });
+
+    it('should should return NaN for unparsed value', function() {
+        expect( Number.isNaN( ms.sod('foo') ) ).to.be.ok();
+    });
+
+});

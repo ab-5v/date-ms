@@ -44,6 +44,16 @@ Object.defineProperty(ms, 'tz', {
 });
 
 /**
+ * Start of day (in user's timezone)
+ *
+ * @param {String|Number|Date} date
+ * @returns Number
+ */
+ms.sod = function(date) {
+    return Math.floor( ms(date) / mult['d'] ) * mult['d'] + ms.tz;
+};
+
+/**
  * Parse the given `str` and return milliseconds.
  *
  * @param {String} str
