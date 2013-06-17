@@ -131,11 +131,11 @@ describe('sod', function() {
 
     it('should return start of day', function() {
         expect( ms.sod('Mon Jun 17 2013 15:57:49 GMT+0400 (MSK)') )
-            .to.eql( +new Date('Mon Jun 17 2013 00:00:00 GMT+0400 (MSK)') );
+            .to.eql( +new Date('2013-06-17T00:00:00Z') - ms('4h') );
     });
 
     it('should should return NaN for unparsed value', function() {
-        expect( Number.isNaN( ms.sod('foo') ) ).to.be.ok();
+        expect( isNaN( ms.sod('foo') ) ).to.be.ok();
     });
 
 });
